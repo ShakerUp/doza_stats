@@ -12,7 +12,6 @@ export async function getCoffeeSales(date = null) {
       const day = String(today.getDate()).padStart(2, '0');
       targetDate = `${year}${month}${day}`;
     }
-
     const url = `https://joinposter.com/api/dash.getProductsSales?token=${POSTER_TOKEN}&date_from=${targetDate}&date_to=${targetDate}`;
 
     const response = await axios.get(url);
