@@ -169,8 +169,6 @@ async function showCoffeeSales(bot, chatId, messageId, date, userState) {
       let grinderCount = 0;
 
       sales.forEach((item) => {
-        message += `▫️ ${item.product_name}: ${parseInt(item.count)} шт.\n`;
-
         const itemCount = parseInt(item.count) || 0;
         totalCount += itemCount;
 
@@ -179,6 +177,9 @@ async function showCoffeeSales(bot, chatId, messageId, date, userState) {
           item.product_name?.toLowerCase().includes(doubleProduct.toLowerCase()),
         );
         grinderCount += isDoublePortion ? itemCount * 2 : itemCount;
+        message += `${isDoublePortion ? '🟠' : '⚪'} ${item.product_name}: ${parseInt(
+          item.count,
+        )} шт.\n`;
       });
 
       message += `\n📈 Итого: ${totalCount.toFixed(0)} шт.`;

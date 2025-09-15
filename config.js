@@ -25,6 +25,8 @@ export const EXCLUDED_PRODUCTS = [
   'Какао Веган 0,3',
   'Какао Веган 0,2',
   'Джемовые',
+  'Айс матча',
+  'Маття',
 ];
 
 export const DOUBLE_GRINDER = [
