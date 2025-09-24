@@ -3,11 +3,15 @@ import TelegramBot from 'node-telegram-bot-api';
 export function getMainKeyboard() {
   return {
     reply_markup: {
-      inline_keyboard: [[{ text: '☕ Проверка гриндера', callback_data: 'grinder_check' }]],
+      inline_keyboard: [
+        [
+          { text: '☕ Проверка гриндера', callback_data: 'grinder_check' },
+          { text: '📊Статистика', callback_data: 'sales_stats' },
+        ],
+      ],
     },
   };
 }
-
 export function getDateSelectionKeyboard() {
   const today = new Date();
   const yesterday = new Date();
