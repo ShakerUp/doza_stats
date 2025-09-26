@@ -27,6 +27,7 @@ export const EXCLUDED_PRODUCTS = [
   'Джемовые',
   'Айс матча',
   'Маття',
+  'Матча сок айс',
 ];
 
 export const DOUBLE_GRINDER = [
